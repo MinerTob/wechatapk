@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">APK安装器</string>
+    <string name="permission_explanation">
+        本应用需要以下权限：
+        \n- 存储权限：用于读取您选择的APK文件
+        \n- 安装权限：用于完成应用安装
+        \n我们承诺：
+        \n1. 不会收集任何用户数据
+        \n2. 不会访问非APK文件
+        \n3. 所有代码已在GitHub开源
+    </string>
+</resources>
