@@ -35,11 +35,11 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/card_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="onGithubClick"
-        app:cardBackgroundColor="@color/card_background">
+        android:onClick="onGithubClick">
 
         <LinearLayout
             android:layout_width="match_parent"
