@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage(R.string.permission_explanation)
                 .setPositiveButton("查看源码", (d, w) -> {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                            Uri.parse("https://github.com/MinerTob"));
+                            Uri.parse("https://github.com/MinerTob/wechatapk"));
                     startActivity(browserIntent);
                 })
                 .setNegativeButton("关闭", null)
