@@ -23,43 +23,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- 添加微信文件分享支持 -->
+            <!-- 支持QQ和微信的文件分享 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data
-                    android:scheme="content"
-                    android:host="*"
-                    android:mimeType="application/vnd.android.package-archive"/>
-                <data
-                    android:scheme="content"
-                    android:host="*"
-                    android:pathPattern=".*\\.apk"
-                    android:mimeType="*/*"/>
-                <data
-                    android:scheme="content"
-                    android:host="*"
-                    android:pathPattern=".*\\.apk\\..*"
-                    android:mimeType="*/*"/>
-            </intent-filter>
-
-            <!-- 增强文件类型匹配 -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data
-                    android:scheme="file"
-                    android:host="*"
-                    android:mimeType="application/vnd.android.package-archive"/>
-                <data
-                    android:scheme="file"
-                    android:host="*"
-                    android:pathPattern=".*\\.apk"/>
-                <data
-                    android:scheme="file"
-                    android:host="*"
-                    android:pathPattern=".*\\.apk\\..*"/>
+                
+                <!-- 支持多种MIME类型 -->
+                <data android:mimeType="*/*"/>
+                <data android:mimeType="application/vnd.android.package-archive"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/zip"/>
+                
+                <!-- 支持content和file协议 -->
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                
+                <!-- 支持各种APK文件命名模式 -->
+                <data android:pathPattern=".*\\.apk"/>
+                <data android:pathPattern=".*\\.APK"/>
+                <data android:pathPattern=".*\\.apk\\..*"/>
+                <data android:pathPattern=".*\\.APK\\..*"/>
+                <data android:pathPattern=".*\\.apk \\(\\d+\\)\\..*"/>
+                <data android:pathPattern=".*\\.APK \\(\\d+\\)\\..*"/>
+                <data android:pathPattern=".*\\.apk\\.1"/>
+                <data android:pathPattern=".*\\.APK\\.1"/>
             </intent-filter>
         </activity>
         <provider
